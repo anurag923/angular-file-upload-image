@@ -1,0 +1,14 @@
+<hello name="{{ name }}"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+<p>--------------------------------------------------------</p>
+<form #f="ngForm">
+  <input type="text" ngModel name="new_name">
+  <br>
+  <input type="file" [multiple]=false name="files" accept="image/*" (change)="onFileChanged($event)">
+  <br>
+  <input type="text" [(ngModel)] = "your_new_name" name="your_name">
+  <br>
+  <button type="submit" (click)="onSubmit()" class="btn btn-primary">Submit</button>
+</form>
